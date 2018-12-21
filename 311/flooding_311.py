@@ -3,14 +3,14 @@
 """
 Created on Fri Nov  2 14:52:42 2018
 Data Visualization of Geolocated 311 Data retrieved from NYC socrata, filtered by 'flooding'
-@author: user
+@author: Daniel Vignoles
 """
 
 #https://medium.com/@chrieke/essential-geospatial-python-libraries-5d82fcc38731
 import pandas as pd
 import geopandas as gpd
 from shapely.geometry import Point
-import contextily as ctx
+#import contextily as ctx
 import matplotlib.pyplot as plt
 
 #MAC
@@ -56,7 +56,7 @@ sep18_6h = dfProcess(sep18_6_file)
 sep18_12h = dfProcess(sep18_12_file)
 sep18_24h = dfProcess(sep18_24_file)
 
-nnyc = gpd.read_file("C:\\Users\\dvign\\Desktop\\asrc\\shp\\nybb_18c\\nybb.shp")
+nyc = gpd.read_file("C:\\Users\\dvign\\Desktop\\asrc\\shp\\nybb_18c\\nybb.shp")
 nyc = nyc.to_crs(epsg = 4326)
 
 #Weather Stations
